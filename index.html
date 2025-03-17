@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT-Style Website</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script type="module">
+        import { pipeline, AutoTokenizer } from "https://cdn.jsdelivr.net/npm/@xenova/transformers";
+        window.transformers = { pipeline, AutoTokenizer };  
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <button id="toggle-sidebar">☰</button> <!-- Sidebar Toggle Button -->
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#" data-page="chat">Chat</a></li>
+                <li><a href="#" data-page="about">About</a></li>
+                <li><a href="#" data-page="projects">Projects</a></li>
+                <li><a href="#" data-page="resume">Resume</a></li>
+            </ul>
+        </nav>
+
+        <!-- How to Use Section (Restored) -->
+        <div class="how-to-use">
+            <h3>How to Use</h3>
+            <p>💬 Click on "Chat" to start a conversation.</p>
+            <p>✏️ Use the input box below to type your messages.</p>
+            <p>🏔️ Explore other sections for more info.</p>
+        </div>
+    </aside>
+
+    <!-- Main Chat Container -->
+    <main class="chat-container">
+        <div class="chat-box" id="chat-box"></div>
+        
+        <!-- Input Field -->
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Ask me anything..." onkeypress="handleKeyPress(event)">
+            <button class="send-btn" onclick="sendMessage()">➡️</button>
+        </div>
+    </main>
+
+    <script src="assets/js/chatbot.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
