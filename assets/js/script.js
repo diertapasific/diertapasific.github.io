@@ -1,4 +1,3 @@
-// Function to handle user input
 async function sendMessage() {
     let inputField = document.getElementById("user-input");
     let chatBox = document.getElementById("chat-box");
@@ -6,32 +5,23 @@ async function sendMessage() {
 
     if (!userMessage) return;
 
-    // Create User Message Bubble
-    let userBubble = document.createElement("div");
-    userBubble.classList.add("chat-message", "user-message");
+    let userBubble = document.createElement("p");
+    userBubble.classList.add("user-message");
     userBubble.textContent = userMessage;
     chatBox.appendChild(userBubble);
 
-    // Auto-scroll to latest message
-    chatBox.scrollTop = chatBox.scrollHeight;
-
-    // Clear input field
     inputField.value = "";
 
-    // Simulate bot response
-    let response = await getResponse(userMessage);
+    setTimeout(async () => {
+        let response = await getResponse(userMessage);
 
-    // Create Bot Message Bubble
-    let botBubble = document.createElement("div");
-    botBubble.classList.add("chat-message", "bot-message");
-    botBubble.textContent = response;
-    chatBox.appendChild(botBubble);
-
-    // Auto-scroll to latest message
-    chatBox.scrollTop = chatBox.scrollHeight;
+        let botBubble = document.createElement("p");
+        botBubble.classList.add("bot-message");
+        botBubble.textContent = response;
+        chatBox.appendChild(botBubble);
+    }, 500);
 }
 
-// Function to handle Enter key press
 function handleKeyPress(event) {
     if (event.key === "Enter") {
         sendMessage();
@@ -70,10 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
 
-    // Load default page (Chat)
     loadPage("chat");
 
-    // Attach event listeners to navigation links
     navLinks.forEach(link => {
         link.addEventListener("click", function (event) {
             event.preventDefault();
@@ -83,5 +71,45 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.querySelector(".sidebar");
+    const toggleButton = document.getElementById("toggle-sidebar");
+    const menuLinks = document.querySelectorAll(".nav-list a");
 
+    if (!sidebar || !toggleButton) {
+        console.error("Sidebar or Toggle Button not found!");
+        return;
+    }
 
+    toggleButton.addEventListener("click", function () {
+        sidebar.classList.toggle("collapsed");
+    });
+
+    menuLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            if (window.innerWidth <= 768) {
+                sidebar.classList.add("collapsed");
+            }
+        });
+    });
+
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 768) {
+            sidebar.classList.remove("collapsed");
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.querySelector(".sidebar");
+    const toggleButton = document.getElementById("toggle-sidebar");
+
+    if (!sidebar || !toggleButton) {
+        console.error("Sidebar or Toggle Button not found!");
+        return;
+    }
+
+    toggleButton.addEventListener("click", function () {
+        sidebar.classList.toggle("collapsed");
+    });
+});
