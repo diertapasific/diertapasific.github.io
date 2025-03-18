@@ -10,6 +10,8 @@ async function sendMessage() {
     userBubble.textContent = userMessage;
     chatBox.appendChild(userBubble);
 
+    scrollToLatestMessage();
+
     inputField.value = "";
 
     setTimeout(async () => {
@@ -19,8 +21,11 @@ async function sendMessage() {
         botBubble.classList.add("bot-message");
         botBubble.textContent = response;
         chatBox.appendChild(botBubble);
-    }, 500);
+
+        scrollToLatestMessage();
+    }, 300);
 }
+
 
 function handleKeyPress(event) {
     if (event.key === "Enter") {
@@ -50,9 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(response => {
                 if (!response.ok) throw new Error(`Failed to load ${filePath}`);
                 return response.text();
-            })
-            .then(data => {
-                chatContainer.innerHTML = data;
             })
             .catch(error => {
                 chatContainer.innerHTML = "<h2>Page not found</h2>";
@@ -112,4 +114,120 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleButton.addEventListener("click", function () {
         sidebar.classList.toggle("collapsed");
     });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Detect if the user is on a mobile device
+    if (window.innerWidth <= 768) {
+        document.querySelector(".sidebar").classList.add("collapsed");
+    }
+});
+
+function scrollToLatestMessage() {
+    let chatBox = document.getElementById("chat-box");
+    chatBox.scrollTo({
+        top: chatBox.scrollHeight,
+        behavior: "smooth"
+    });
+}
+
+// Detect when the keyboard is opened and adjust the input field
+window.addEventListener("resize", () => {
+    let inputContainer = document.querySelector(".input-container");
+    if (window.innerHeight < 500) {  // Adjust this threshold if needed
+        inputContainer.style.position = "absolute";
+        inputContainer.style.bottom = "50px"; // Push it up
+    } else {
+        inputContainer.style.position = "sticky";
+        inputContainer.style.bottom = "0";
+    }
+});
+
+// add this amte
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-list a");
+    const chatContainer = document.querySelector(".chat-container");
+
+    function loadPage(page) {
+        let filePath = `pages/${page}.html`;
+
+        fetch(filePath)
+            .then(response => {
+                if (!response.ok) throw new Error(`Failed to load ${filePath}`);
+                return response.text();
+            })
+            .then(data => {
+                chatContainer.innerHTML = data;
+
+                // ✅ Re-run chatbot scripts when chat page loads
+                if (page === "chat") {
+                    checkDeviceAndSendMessage(); // Check device & send message
+                    attachEventListeners(); // Reattach event listeners
+                }
+            })
+            .catch(error => {
+                chatContainer.innerHTML = "<h2>Page not found</h2>";
+                console.error(error);
+            });
+    }
+
+    loadPage("chat");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const page = this.getAttribute("data-page");
+            loadPage(page);
+        });
+    });
+});
+
+// ✅ Check if the user is on mobile and disable input
+function checkDeviceAndSendMessage() {
+    let inputField = document.getElementById("user-input");
+
+    setTimeout(() => {
+        if (window.innerWidth < 768) {  
+            sendBotMessage("⚠️ My chatbot is currently only available on desktop. In the meantime, feel free to explore this website to learn more about Dierta—his background, experiences, and more! ");
+            if (inputField) inputField.disabled = true;  // Disable input field
+        } else {
+            sendBotMessage("Hey there! I'm Dierta's AI assistant. You can ask me anything about him in a full sentence, like 'What is your name?'. Please use English and I'll do my best to help! 😊");
+            if (inputField) inputField.disabled = false;  // Enable input field
+        }
+    }, 300);
+}
+
+// ✅ Reattach event listeners for input field
+function attachEventListeners() {
+    const inputField = document.getElementById("user-input");
+    if (inputField) {
+        inputField.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                sendMessage();
+            }
+        });
+    }
+}
+
+function adjustViewportHeight() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+}
+
+// Adjust viewport height on load & resize
+window.addEventListener("resize", adjustViewportHeight);
+window.addEventListener("load", adjustViewportHeight);
+
+// Detect keyboard opening on mobile & adjust input field
+window.addEventListener("resize", () => {
+    let inputContainer = document.querySelector(".input-container");
+    let socials = document.querySelector(".socials");
+
+    if (window.innerHeight < 600) {
+        inputContainer.style.bottom = "50px"; // Moves input up
+        socials.style.bottom = "120px"; // Moves socials up
+    } else {
+        inputContainer.style.bottom = "0"; // Reset position
+        socials.style.bottom = "60px"; // Reset socials
+    }
 });

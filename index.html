@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Dierta Pasific</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="icon" type="image/png" href="assets/img/title-img.png">
@@ -13,7 +13,10 @@
     <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
 </head>
 <body>
-    <div class="top-bar"></div>
+    <div class="top-bar">
+        <span class="top-bar-left"></span>
+        <p class="top-bar-right"><b>ChatDP</b></p>
+    </div>
     <aside class="sidebar">
         <button id="toggle-sidebar">☰</button>
         <nav>
@@ -26,8 +29,10 @@
             </ul>
         </nav>
         <div class="socials">
-            <p>LinkedIn</p>
-            <p>pasificdierta@gmail.com</p>
+            <p><a href="https://www.linkedin.com/in/dierta-pasific/" target="_blank" >LinkedIn</a></p>
+            <p><a href="http://github.com/diertapasific" target="_blank" >Github</a></p>
+            <p><a href="mailto:pasificdierta@gmail.com" target="_blank" >Email</a></p>
+            <p><a href="https://drive.google.com/uc?export=download&id=1Jux8LW6asOlxLcQ3urwIFtwi0wFg8lLY" target="_blank" >Download CV</a></p>
         </div>
     </aside>
     <main class="chat-container"></main>

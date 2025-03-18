@@ -112,6 +112,18 @@ async function loadModel() {
   }
 }
 
+
+// Function to send bot message without user input
+function sendBotMessage(message) {
+  let chatBox = document.getElementById("chat-box");
+
+  let botMessage = document.createElement("div");
+  botMessage.classList.add("chat-message", "bot-message");
+  botMessage.textContent = message;
+  
+  chatBox.appendChild(botMessage);
+}
+
 loadModel();
 
 function handleKeyPress(event) {
