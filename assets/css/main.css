@@ -340,10 +340,129 @@ body {
 }
 
 @media (max-width: 768px) {
-    .chat-container, .sidebar {
+    .chat-container, .sidebar, .page-content  {
         height: calc(100dvh - env(safe-area-inset-bottom, 0px));
         max-height: calc(100dvh - env(safe-area-inset-bottom, 0px)); /* Ensures no overflow */
         padding-bottom: env(safe-area-inset-bottom, 10px); /* Adds spacing to prevent cropping */
         overflow-y: auto; /* Enables scrolling if necessary */
     }
+}
+
+.page-content {
+    margin-top: 50px;
+}
+
+/* About Page Container */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    max-width: 900px;
+    padding: 20px;
+}
+
+/* Content Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text to the left */
+    gap: 40px;
+    width: 100%;
+}
+
+/* Left Side (Text) */
+.about-text {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left; /* Ensures text stays left-aligned */
+}
+
+.about-text h3{
+    flex: 1;
+    font-size: 45px;
+    line-height: 1.6;
+    text-align: left; /* Ensures text stays left-aligned */
+}
+
+/* Right Side (Image) */
+.about-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills Section */
+.skills-section {
+    margin-top: 40px;
+    width: 100%;
+}
+
+/* Skill Category Title */
+.skill-category {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Skill Containers */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start; /* Align skills to the left */
+    margin-top: 10px;
+}
+
+/* Skill Bubbles (Outlined) */
+.skill {
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 1px solid #000000; /* Outlined */
+    color: #000000;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.skill:hover {
+    color: rgb(0, 0, 0);
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: flex-start; /* Ensures text stays left-aligned */
+    }
+
+    .about-text {
+        text-align: left;
+    }
+
+    .about-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .skills-container {
+        justify-content: flex-start; /* Keeps skills aligned left */
+    }
+}
+
+.page-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* Smooth Scroll Effect */
+html {
+    scroll-behavior: smooth;
 }
