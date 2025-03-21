@@ -147,14 +147,19 @@ async function sendMessage() {
 }
 
 async function getResponse(userInput) {
+  // Wait until tokenizer is loaded
+  if (!tokenizer) {
+      console.error("❌ Tokenizer not loaded yet. Waiting...");
+      await loadTokenizer();
+  }
   let tokens = await tokenize(userInput);
   let paddedInputIds = padOrTruncate(tokens.input_ids, SEQUENCE_LENGTH);
   let paddedAttentionMask = padOrTruncate(tokens.attention_mask, SEQUENCE_LENGTH);
   let inputTensor = new ort.Tensor("int64", new BigInt64Array(paddedInputIds.map(BigInt)), [1, SEQUENCE_LENGTH]);
   let attentionTensor = new ort.Tensor("int64", new BigInt64Array(paddedAttentionMask.map(BigInt)), [1, SEQUENCE_LENGTH]);
   let outputs = await session.run({
-    "input_ids": inputTensor,
-    "attention_mask": attentionTensor
+      "input_ids": inputTensor,
+      "attention_mask": attentionTensor
   });
   let embedding = meanPooling(outputs);
   return findBestMatch(embedding);
