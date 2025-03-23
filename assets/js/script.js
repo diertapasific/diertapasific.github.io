@@ -191,8 +191,10 @@ function checkDeviceAndSendMessage() {
             sendBotMessage("⚠️ My chatbot is currently only available on desktop. In the meantime, feel free to explore this website to learn more about Dierta—his background, experiences, and more! ");
             if (inputField) inputField.disabled = true;  // Disable input field
         } else {
-            sendBotMessage("👋 Hello there! I'm ChatDP, Dierta's AI assistant. You can ask me anything about him in a full sentence, like 'What is your name?' and I'll do my best to help!");
-            if (inputField) inputField.disabled = false;  // Enable input field
+            sendBotMessage("👋 Hello there! I'm ChatDP, Dierta's AI assistant. You can ask me anything about him in a full sentence, like <strong>'What is your name?'</strong>");
+
+
+            if (inputField) inputField.disabled = false;
         }
     }, 300);
 }

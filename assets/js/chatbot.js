@@ -4,20 +4,31 @@ let dataset = [];
 let datasetEmbeddings = {};
 let tokenizer = null;
 
+window.addEventListener("load", async () => {
+  await loadTokenizer();
+});
+
 async function waitForTransformers() {
   while (!window.transformers || !window.transformers.AutoTokenizer) {
-    await new Promise(resolve => setTimeout(resolve, 500));
+      console.log("⏳ Waiting for Transformers.js to load...");
+      await new Promise(resolve => setTimeout(resolve, 500));
   }
+  console.log("✅ Transformers.js Loaded!");
 }
+
 
 async function loadTokenizer() {
   try {
-    await waitForTransformers();
-    tokenizer = await window.transformers.AutoTokenizer.from_pretrained("Xenova/bert-base-uncased");
+      await waitForTransformers();
+      tokenizer = await window.transformers.AutoTokenizer.from_pretrained("Xenova/bert-base-uncased");
+      console.log("✅ Tokenizer Loaded!");
   } catch (error) {
-    console.error("Error loading tokenizer:", error);
+      console.error("❌ Error loading tokenizer:", error);
+      
+      setTimeout(loadTokenizer, 1000);
   }
 }
+
 
 async function loadDataset() {
   try {
@@ -116,13 +127,12 @@ async function loadModel() {
 // Function to send bot message without user input
 function sendBotMessage(message) {
   let chatBox = document.getElementById("chat-box");
-
-  let botMessage = document.createElement("div");
-  botMessage.classList.add("chat-message", "bot-message");
-  botMessage.textContent = message;
-  
-  chatBox.appendChild(botMessage);
+  let botBubble = document.createElement("p");
+  botBubble.classList.add("bot-message");
+  botBubble.innerHTML = message; // Use innerHTML to render <br> tags properly
+  chatBox.appendChild(botBubble);
 }
+
 
 loadModel();
 
@@ -152,6 +162,12 @@ async function getResponse(userInput) {
       console.error("❌ Tokenizer not loaded yet. Waiting...");
       await loadTokenizer();
   }
+
+  if (!session) {
+    console.error("❌ ONNX model is not loaded yet. Please wait...");
+    return "ChatDP is still loading... 🚀 Please be patient while I get ready!";
+}
+
   let tokens = await tokenize(userInput);
   let paddedInputIds = padOrTruncate(tokens.input_ids, SEQUENCE_LENGTH);
   let paddedAttentionMask = padOrTruncate(tokens.attention_mask, SEQUENCE_LENGTH);
