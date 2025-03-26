@@ -165,7 +165,7 @@ async function getResponse(userInput) {
 
   if (!session) {
     console.error("❌ ONNX model is not loaded yet. Please wait...");
-    return "ChatDP is still loading... 🚀 Please be patient while I get ready!";
+    return "📦 ChatDP is still loading... Please be patient while I get ready!";
 }
 
   let tokens = await tokenize(userInput);
