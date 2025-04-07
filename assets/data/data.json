@@ -16,8 +16,8 @@
     "answer": "Old enough to know better, young enough to still try."
   },
   {
-    "question": "How did you make ChatDP?",
-    "answer": "I built ChatDP using a fine-tuned Sentence Transformer model to convert user inputs into vector representations. Then, I use cosine similarity to match the best possible response. The model runs efficiently in the browser with ONNX Runtime, meaning no external servers are required. I also set up a monitoring pipeline to improve responses over time!"
+    "question": "What is ChatDP?",
+    "answer": "He developed a custom AI chatbot using a fine-tuned sentence transformer model, optimized for fast, client-side inference. And here I am :D"
   },
   {
     "question": "What is your work experience?",
