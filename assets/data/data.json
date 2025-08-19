@@ -1,163 +1,47 @@
 [
   {
-    "question": "What is Frezz?",
-    "answer": "Frezz is his deep learning project that uses CNN to classify fresh and non-fresh fruits."
-  },
-  {
-    "question": "What are your future career goals?",
-    "answer": "He aspires to become a leading artificial intelligence engineer."
-  },
-  {
-    "question": "How can I contact you?",
-    "answer": "You can reach him via LinkedIn, Email, or Instagram!"
-  },
-  {
-    "question": "How old are you?",
-    "answer": "Old enough to know better, young enough to still try."
-  },
-  {
-    "question": "What is ChatDP?",
-    "answer": "He developed a custom AI chatbot using a fine-tuned sentence transformer model, optimized for fast, client-side inference. And here I am :D"
-  },
-  {
-    "question": "What is your work experience?",
-    "answer": "He has worked as a Backend Developer Intern and a Mobile App Developer in a project-based internship."
-  },
-  {
-    "question": "What certifications do you have?",
-    "answer": "He holds multiple certifications in technology. Explore his website for details."
-  },
-  {
-    "question": "What projects have you worked on?",
-    "answer": "He has worked on multiple exciting projects like ChatDP, Frezz, Veganfuel and others. You can ask me about the details for his projects."
-  },
-  {
-    "question": "Where do you work?",
-    "answer": "He is actively seeking new opportunities to gain hands-on experience and enhance his skills."
-  },
-  {
-    "question": "What is your current job?",
-    "answer": "He is actively seeking new opportunities to gain hands-on experience and enhance his skills."
-  },
-  {
-    "question": "Where do you study?",
-    "answer": "He is pursuing a Computer Science degree at Bina Nusantara University."
-  },
-  {
-    "question": "What languages do you speak?",
-    "answer": "He is fluent in Bahasa Indonesia and proficient in English."
-  },
-  {
-    "question": "What are your strengths?",
-    "answer": "He is known for his strong problem-solving skills, adaptability, and teamwork."
-  },
-  {
-    "question": "What are your leadership experiences?",
-    "answer": "He led TECHFEST 2023, organizing competitions, expos, and tech talks for 250+ participants."
-  },
-  {
-    "question": "How do your colleagues describe you?",
-    "answer": "They see him as reliable, solution-oriented, and a great team player."
-  },
-  {
-    "question": "What are your technical skills?",
-    "answer": "He is skilled in Python, Java, SQL, cloud technologies, and specializes in backend development and AI."
+    "question": "Who are you?",
+    "answer": "Dierta Pasific is an aspiring AI engineer eager to push the boundaries of artificial intelligence. His portfolio website reflects his journey, skills, and innovations—feel free to explore and ask anything about him!"
   },
   {
     "question": "What is your full name?",
     "answer": "His full name is Dierta Pasific, but you can call him Dipa!"
   },
   {
-    "question": "What are your hobbies?",
-    "answer": "He enjoys reading books, listening to tech podcasts, and working on side projects."
-  },
-  {
-    "question": "What is Telecom Customer Churn Analysis?",
-    "answer": "It’s a machine learning model he built to predict customer churn in the telecom industry."
-  },
-  {
-    "question": "What have you learned from your internship experience?",
-    "answer": "He has gained valuable insights into software development, problem-solving, and collaboration."
-  },
-  {
-    "question": "What is VeganFuel?",
-    "answer": "VeganFuel is an iOS app he developed to help users discover diverse vegan food options."
-  },
-  {
-    "question": "Have you participated in competitions?",
-    "answer": "Yes! He has competed in events like the International Collegiate Programming Contest (ICPC)."
-  },
-  {
-    "question": "Are you looking for an internship?",
-    "answer": "Absolutely! He is actively searching for opportunities to expand his experience and skills."
-  },
-  {
-    "question": "Are you interested in working abroad?",
-    "answer": "Yes! He is open to working in tech-driven environments that foster innovation worldwide."
-  },
-  {
-    "question": "Have you participated in organizations?",
-    "answer": "Yes! He was an active member of HIMTI & BNCC at Bina Nusantara University."
-  },
-  {
-    "question": "What programming languages do you know?",
-    "answer": "He is proficient in Python, Java, C, SQL, and cloud computing technologies."
-  },
-  {
-    "question": "What tools or tech stack do you use?",
-    "answer": "He works with Git, Docker, Google Cloud, and various frameworks."
-  },
-  {
-    "question": "What are your areas of expertise?",
-    "answer": "His expertise includes Artificial Intelligence, Machine Learning, Backend Development, API design, and Cloud Computing."
-  },
-  {
-    "question": "Do you work on personal projects?",
-    "answer": "Yes! He actively builds side projects to explore and apply new technologies."
-  },
-  {
-    "question": "Are you open to collaboration?",
-    "answer": "Definitely! He enjoys working with developers on meaningful projects."
-  },
-  {
     "question": "What can I call you?",
     "answer": "You can call him Dipa!"
+  },
+  {
+    "question": "How old are you?",
+    "answer": "Old enough to know better, young enough to still try."
   },
   {
     "question": "Where do you live?",
     "answer": "He currently lives in Jakarta, Indonesia."
   },
   {
-    "question": "What motivates you?",
-    "answer": "He is driven by solving real-world problems through technology and continuous learning."
+    "question": "What languages do you speak?",
+    "answer": "He is fluent in Bahasa Indonesia and proficient in English."
+  },
+  {
+    "question": "What are your hobbies?",
+    "answer": "He enjoys reading books, listening to tech podcasts, and working on side projects."
   },
   {
     "question": "What books have you read?",
     "answer": "He enjoys reading books on technology, self-improvement, and leadership. Some of his favorites include 'Atomic Habits' by James Clear."
   },
   {
-    "question": "Do you have a blog?",
-    "answer": "Yes, he has a blog where he shares insights and experiences. Please explore his website for details."
-  },
-  {
-    "question": "Can I read your blog?",
-    "answer": "Yes! You can explore his blog where he shares knowledge and ideas."
-  },
-  {
-    "question": "Who are you?",
-    "answer": "Dierta Pasific is an aspiring AI engineer eager to push the boundaries of artificial intelligence. He’s currently exploring opportunities for an internship to gain deeper hands-on experience in the field. His portfolio website reflects his journey, skills, and innovations—feel free to explore and ask anything about him!"
-  },
-  {
     "question": "What is your favorite food?",
     "answer": "He is a vegan, and his favorite food is probably spaghetti."
   },
   {
-    "question": "Do you like coffee or tea?",
-    "answer": "He enjoys both, but he usually prefers coffee to stay focused while coding!"
+    "question": "What is your favorite drink?",
+    "answer": "He loves iced matcha and chocolate milk!"
   },
   {
-    "question": "What is your favorite drink?",
-    "answer": "He loves iced coffee and chocolate milk!"
+    "question": "Do you like coffee or tea?",
+    "answer": "He enjoys both, but he usually prefers coffee to stay focused while coding!"
   },
   {
     "question": "What is your favorite color?",
@@ -181,7 +65,7 @@
   },
   {
     "question": "What is your favorite sport?",
-    "answer": "He likes badminton and occasionally goes jogging."
+    "answer": "He likes badminton and occasionally goes jogging and cycling."
   },
   {
     "question": "Do you have pets?",
@@ -197,7 +81,7 @@
   },
   {
     "question": "What kind of music do you like?",
-    "answer": "He enjoys K-pop, lo-fi, instrumental, and a mix of pop."
+    "answer": "He enjoys K-pop, lo-fi, r&b, and a mix of pop."
   },
   {
     "question": "Do you like to travel?",
@@ -250,8 +134,7 @@
   {
     "question": "What is your most memorable F1 moment?",
     "answer": "One of his favorite moments is when Max Verstappen took the championship from Lewis Hamilton in the dramatic final lap of the 2021 Abu Dhabi Grand Prix."
-  }
-  ,
+  },
   {
     "question": "Which F1 season was the most exciting for you?",
     "answer": "The 2021 season was incredible! THe battles between Max and Lewis is something else."
@@ -265,11 +148,127 @@
     "answer": "He’d love to drive the Red Bull white livery car from the 2021 Turkish Grand Prix, it looks like an absolute beast on track."
   },
   {
+    "question": "What is your favorite quote?",
+    "answer": "One of his favorites is: 'The only way to do great work is to love what you do.' - Steve Jobs"
+  },
+  {
+    "question": "What motivates you?",
+    "answer": "He is driven by solving real-world problems through technology and continuous learning."
+  },
+  {
+    "question": "How can I contact you?",
+    "answer": "You can reach him via LinkedIn, Email, or Instagram!"
+  },
+  {
+    "question": "Where do you study?",
+    "answer": "He is pursuing a Computer Science degree at Bina Nusantara University."
+  },
+  {
+    "question": "Where do you work?",
+    "answer": "He is currently an AI Engineer Intern at Neuram.AI"
+  },
+  {
+    "question": "What is your current job?",
+    "answer": "He is currently an AI Engineer Intern at Neuram.AI"
+  },
+  {
+    "question": "What is your work experience?",
+    "answer": "He has worked as a AI Engineer Intern and a Backend Developer Intern."
+  },
+  {
+    "question": "What have you learned from your internship experience?",
+    "answer": "He has gained valuable insights into software development, problem-solving, and collaboration."
+  },
+  {
+    "question": "What certifications do you have?",
+    "answer": "He holds multiple certifications in technology. Explore his LinkedIn for details."
+  },
+  {
+    "question": "What projects have you worked on?",
+    "answer": "He has worked on multiple exciting projects like ChatDP, Rupcara, Cardify and others. You can ask me about the details for his projects."
+  },
+  {
+    "question": "What is ChatDP?",
+    "answer": "ChatDP is his custom AI chatbot, developed using a fine-tuned sentence transformer model. It’s optimized for fast, client-side inference, allowing real-time responses without relying on server costs. And here I am :D"
+  },
+  {
+    "question": "What is Rupcara?",
+    "answer": "Rupcara is his deep learning project where he built and fine-tuned a ResNet-18 model to recognize Indonesian Rupiah banknotes with high accuracy. The system also generates audio output, making it especially helpful for visually impaired users."
+  },
+  {
+    "question": "What is Cardify?",
+    "answer": "Cardify is his AI-powered web application built with Streamlit that automatically generates flashcards from any uploaded PDF document, helping users study more efficiently."
+  },
+  {
+    "question": "Do you work on personal projects?",
+    "answer": "Yes! He actively builds side projects to explore and apply new technologies."
+  },
+  {
+    "question": "Are you open to collaboration?",
+    "answer": "Definitely! He enjoys working with developers on meaningful projects."
+  },
+  {
+    "question": "Are you looking for an internship?",
+    "answer": "He is not currently seeking internships, but he is actively looking for full-time opportunities to grow his career and contribute his skills."
+  },
+  {
+    "question": "Are you looking for a job?",
+    "answer": "Absolutely! He is currently seeking full-time opportunities where he can apply his skills in AI and software development to create impactful solutions."
+  },
+  {
+    "question": "Are you interested in working abroad?",
+    "answer": "Yes! He is open to working in tech-driven environments that foster innovation worldwide."
+  },
+  {
+    "question": "What are your future career goals?",
+    "answer": "He aspires to become a leading artificial intelligence engineer."
+  },
+  {
     "question": "What is your dream job?",
     "answer": "Something that allows him to innovate with technology and solve real-world problems."
   },
   {
-    "question": "What is your favorite quote?",
-    "answer": "One of his favorites is: 'The only way to do great work is to love what you do.' - Steve Jobs"
+    "question": "What are your technical skills?",
+    "answer": "He is skilled in Python, Java, SQL, cloud technologies, and specializes in AI."
+  },
+  {
+    "question": "What programming languages do you know?",
+    "answer": "He is proficient in Python, Java, C, SQL, and cloud computing technologies."
+  },
+  {
+    "question": "What tools or tech stack do you use?",
+    "answer": "He works with Git, Docker, Google Cloud, and various frameworks."
+  },
+  {
+    "question": "What are your areas of expertise?",
+    "answer": "His expertise includes Artificial Intelligence, Machine Learning, Backend Development, API design, and Cloud Computing."
+  },
+  {
+    "question": "What are your strengths?",
+    "answer": "He is known for his strong problem-solving skills, adaptability, and teamwork."
+  },
+  {
+    "question": "How do your colleagues describe you?",
+    "answer": "They see him as reliable, solution-oriented, and a great team player."
+  },
+  {
+    "question": "What are your leadership experiences?",
+    "answer": "He led TECHFEST 2023, organizing competitions, expos, and tech talks for 250+ participants. And he was member of both BNCC & HIMTI at Bina Nusantara University."
+  },
+  {
+    "question": "Have you participated in competitions?",
+    "answer": "Yes! He has competed in events like the ASEAN Data Science Explorer 2022 and International Collegiate Programming Contest (ICPC)."
+  },
+  {
+    "question": "Have you participated in organizations?",
+    "answer": "Yes! He was an active member of HIMTI & BNCC at Bina Nusantara University."
+  },
+  {
+    "question": "Do you have a blog?",
+    "answer": "Yes, he has a blog where he shares insights and experiences. Please explore his website for details."
+  },
+  {
+    "question": "Can I read your blog?",
+    "answer": "Yes! You can explore his blog where he shares knowledge and ideas."
   }
 ]
