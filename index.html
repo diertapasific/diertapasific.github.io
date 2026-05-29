@@ -1,43 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dierta Pasific | AI Engineer</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="icon" type="image/png" href="assets/img/title-img.png">
+    <link rel="icon" type="image/png" href="/assets/img/title-img.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <!-- Chatbot dependencies loaded via CDN to avoid WASM bundler complexity -->
     <script type="module">
-        import { pipeline, AutoTokenizer } from "https://cdn.jsdelivr.net/npm/@xenova/transformers";
-        window.transformers = { pipeline, AutoTokenizer };  
+      import { pipeline, AutoTokenizer } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers';
+      window.transformers = { pipeline, AutoTokenizer };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
-</head>
-<body>
-    <div class="top-bar">
-        <span class="top-bar-left"></span>
-        <p class="top-bar-right"><b>ChatDP</b></p>
-    </div>
-    <aside class="sidebar">
-        <button id="toggle-sidebar">☰</button>
-        <nav>
-            <ul class="nav-list">
-                <li><h3>Dierta Pasific</h3></li>
-                <li><a href="#" data-page="chat">💬 Chat</a></li>
-                <li><a href="#" data-page="projects">⚒️ Projects</a></li>
-                <li><a href="#" data-page="experiences">💼 Experiences</a></li>
-                <li><a href="#" data-page="blog">🔗 Blog</a></li>
-                <li><a href="#" data-page="about">👋 About</a></li>
-            </ul>
-        </nav>
-        <div class="socials">
-            <p><a href="https://www.linkedin.com/in/dierta-pasific/" target="_blank" >LinkedIn</a></p>
-            <p><a href="http://github.com/diertapasific" target="_blank" >Github</a></p>
-            <p><a href="mailto:pasificdierta@gmail.com" target="_blank" >Email</a></p>
-            <!-- <p><a href="https://drive.google.com/uc?export=download&id=1Jux8LW6asOlxLcQ3urwIFtwi0wFg8lLY" target="_blank" >Download CV</a></p> -->
-        </div>
-    </aside>
-    <main class="chat-container"></main>
-    <script src="assets/js/chatbot.js"></script>
-    <script src="assets/js/script.js"></script>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
