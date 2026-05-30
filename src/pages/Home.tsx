@@ -47,7 +47,7 @@ export default function Home({ onNavigate }: HomeProps) {
             <div className="flex items-center gap-2.5 mb-6 animate-fade-in">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse-glow" />
               <span className="text-[11px] font-semibold text-blue-400 uppercase tracking-[0.2em]">
-                AI / ML Engineer
+                Jr AI Engineer · Staffinc
               </span>
             </div>
 
@@ -64,9 +64,9 @@ export default function Home({ onNavigate }: HomeProps) {
               className="mt-7 text-base md:text-lg text-zinc-400 leading-relaxed max-w-[46ch] animate-fade-in"
               style={{ animationDelay: '0.1s' }}
             >
-              I build intelligent systems that solve real problems — from
-              browser-native models to end-to-end ML pipelines. Currently
-              seeking full-time AI/ML roles.
+              Forward Deployed Engineer bridging technical execution and
+              real-world business needs. I build automation, AI, and backend
+              systems that actually ship and scale.
             </p>
 
             <div

@@ -1,9 +1,9 @@
 const SKILLS: Record<string, string[]> = {
-  'Languages': ['Python', 'Java', 'SQL', 'C', 'JavaScript', 'Swift', 'HTML / CSS'],
-  'Tools & Frameworks': [
-    'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib',
-    'Streamlit', 'Google Cloud Platform', 'Git & GitHub', 'Figma',
-  ],
+  'Top Skills': ['Agentic AI Development', 'Requirements Gathering', 'Product Development'],
+  'Programming Languages': ['Python', 'Java', 'SQL', 'JavaScript', 'C', 'C++'],
+  'AI & Machine Learning': ['LLMs', 'NLP', 'OCR', 'Scikit-learn', 'TensorFlow', 'PyTorch', 'Hugging Face', 'Pandas', 'NumPy'],
+  'Visualization & Automation': ['Streamlit', 'Pywinauto', 'Matplotlib', 'Seaborn'],
+  'Developer Tools': ['Git', 'GitHub', 'Postman', 'Google Colab', 'GCP', 'Firebase', 'Figma', 'Microsoft Office'],
 }
 
 export default function About() {
@@ -28,7 +28,7 @@ export default function About() {
             className="text-xs text-zinc-500 mt-4 font-mono tracking-wide animate-fade-in"
             style={{ animationDelay: '0.08s' }}
           >
-            AI Engineer &nbsp;&middot;&nbsp; Jakarta, Indonesia
+            Jr AI Engineer · Staffinc &nbsp;&middot;&nbsp; Jakarta, Indonesia
           </p>
 
           <div
@@ -36,16 +36,19 @@ export default function About() {
             style={{ animationDelay: '0.12s' }}
           >
             <p>
-              Aspiring AI Engineer driven by a passion for artificial intelligence, machine learning,
-              and data-driven innovation. Actively seeking full-time opportunities in the AI/ML field.
+              Forward Deployed Engineer with a Computer Science background, focused on delivering
+              applied solutions that bridge technical execution and real-world business needs.
+              Works closely with stakeholders to translate requirements into reliable,
+              production-ready systems.
             </p>
             <p>
-              Focused on building AI solutions that are practical, scalable, and create genuine impact.
-              Deeply curious about how intelligent systems can solve real-world problems.
+              Experience includes building automation and cloud-based solutions, contributing to
+              scalable backend systems, and supporting end-to-end delivery from implementation
+              through iteration in production.
             </p>
             <p>
-              Beyond coding — reads books, listens to tech podcasts, and continuously explores
-              new technologies to stay at the frontier of the field.
+              Driven by hands-on execution, customer impact, and turning complex challenges into
+              simple, usable solutions.
             </p>
           </div>
         </div>

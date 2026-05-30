@@ -56,7 +56,7 @@ export default function Chat() {
             )}
             <div
               className={`
-                max-w-[78%] md:max-w-[62%] px-4 py-3 text-sm leading-relaxed
+                max-w-[78%] md:max-w-[62%] px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap
                 ${msg.role === 'user'
                   ? 'bg-blue-600 dark:bg-blue-500 text-white rounded-2xl rounded-br-sm'
                   : 'bg-zinc-100 dark:bg-zinc-800/70 text-zinc-800 dark:text-zinc-200 rounded-2xl rounded-bl-sm border border-zinc-200 dark:border-zinc-700/50'
