@@ -1,10 +1,15 @@
 import { useState, useRef, useEffect } from 'react'
 import { PaperPlaneTilt, Robot, CircleNotch } from '@phosphor-icons/react'
-import { useChatbot } from '../hooks/useChatbot'
+import type { Message } from '../hooks/useChatbot'
 
-export default function Chat() {
+interface ChatProps {
+  messages: Message[]
+  sendMessage: (text: string) => void
+  isTyping: boolean
+}
+
+export default function Chat({ messages, sendMessage, isTyping }: ChatProps) {
   const [input, setInput] = useState('')
-  const { messages, sendMessage, isTyping } = useChatbot()
   const bottomRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {

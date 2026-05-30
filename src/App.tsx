@@ -7,6 +7,7 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import Experiences from './pages/Experiences'
 import Blog from './pages/Blog'
+import { useChatbot } from './hooks/useChatbot'
 
 export type Page = 'home' | 'chat' | 'projects' | 'experiences' | 'blog' | 'about'
 
@@ -14,6 +15,7 @@ export default function App() {
   const [page, setPage] = useState<Page>('home')
   const [isDark, setIsDark] = useState(true)
   const scrollRef = useRef<HTMLDivElement>(null)
+  const chat = useChatbot()
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', isDark)
@@ -30,7 +32,7 @@ export default function App() {
       case 'chat':
         return (
           <div className="h-[100dvh] pt-16 md:pt-20">
-            <Chat />
+            <Chat {...chat} />
           </div>
         )
       case 'projects':
@@ -55,7 +57,6 @@ export default function App() {
 
       <div
         ref={scrollRef}
-        key={page}
         className="h-dvh overflow-y-auto scrollbar-none animate-fade-in"
       >
         {renderPage()}
