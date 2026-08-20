@@ -18,6 +18,17 @@ interface Project {
 const PROJECTS: Project[] = [
   {
     id: '01',
+    name: 'Beacon',
+    tagline: 'AI-Generated Personalized Learning Paths',
+    description: "Full-stack AI-powered learning app that generates personalized, structured learning paths for any skill on demand. Users describe what they want to learn, their experience level, and weekly availability, and Beacon's AI builds a multi-phase curriculum of bite-sized lessons, quizzes, and real-world examples tailored specifically to them.",
+    tags: ['Next.js', 'PostgreSQL', 'Prisma', 'Groq API'],
+    links: [
+      { label: 'Repository', href: 'https://github.com/diertapasific/beacon', icon: GithubLogo },
+      { label: 'Live Demo', href: 'https://beaconlearn.vercel.app/', icon: ArrowUpRight },
+    ],
+  },
+  {
+    id: '02',
     name: 'SumTube',
     tagline: 'YouTube Videos into Instant Summaries',
     description: 'AI-powered Streamlit app that extracts transcripts and applies multi-pass HuggingFace summarization to distill any YouTube video into clean, readable insights with downloadable PDF reports.',
@@ -28,7 +39,7 @@ const PROJECTS: Project[] = [
     ],
   },
   {
-    id: '02',
+    id: '03',
     name: 'Cardify',
     tagline: 'LLM-Powered Flashcard Generator from PDF',
     description: 'Web app that ingests uploaded PDF documents, chunks the text intelligently, and leverages the Groq LLM API to generate structured Q&A flashcards — with progress tracking and a PDF export.',
@@ -39,7 +50,7 @@ const PROJECTS: Project[] = [
     ],
   },
   {
-    id: '03',
+    id: '04',
     name: 'Rupcara',
     tagline: 'AI Money Recognition for the Visually Impaired',
     description: 'Deep learning tool using a fine-tuned ResNet-18 model to recognize Indonesian Rupiah banknotes across multiple print years with real-time speech synthesis audio output for accessibility.',
@@ -50,7 +61,7 @@ const PROJECTS: Project[] = [
     ],
   },
   {
-    id: '04',
+    id: '05',
     name: 'ChatDP',
     tagline: "AI Personal Assistant — this site's chatbot",
     description: 'Custom chatbot powered by a fine-tuned sentence transformer model converted to ONNX for client-side inference. Zero server costs, real-time semantic matching directly in the browser.',
@@ -60,7 +71,7 @@ const PROJECTS: Project[] = [
     ],
   },
   {
-    id: '05',
+    id: '06',
     name: 'Frezz',
     tagline: 'AI Fruit Freshness Detector',
     description: 'CNN model achieving 98% accuracy classifying fresh and rotten apples, bananas, and oranges. Converted to TensorFlow.js and deployed as a Progressive Web Application.',
@@ -71,7 +82,7 @@ const PROJECTS: Project[] = [
     ],
   },
   {
-    id: '06',
+    id: '07',
     name: 'Telecom Churn Analysis',
     tagline: 'Customer Churn Prediction with Machine Learning',
     description: 'End-to-end ML pipeline for telecom churn prediction using Random Forest. Feature importance reveals Total Day Charge, Total Day Minutes, and Customer Service Calls as top predictors.',
@@ -82,7 +93,7 @@ const PROJECTS: Project[] = [
     ],
   },
   {
-    id: '07',
+    id: '08',
     name: 'VeganFuel',
     tagline: 'Vegan Food Ordering iOS App',
     description: 'Swift-based iOS food ordering app with user authentication, database management, and a clean plant-based meal discovery experience. Designed in Figma from wireframes to final handoff.',
@@ -93,7 +104,7 @@ const PROJECTS: Project[] = [
     ],
   },
   {
-    id: '08',
+    id: '09',
     name: 'Priocars',
     tagline: 'Car Rental Database System',
     description: 'Database systems class final project — structured schema design, optimized SQL queries for insertions, updates, and retrievals, and a clean interface for managing rental transactions.',
