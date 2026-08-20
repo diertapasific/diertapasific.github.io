@@ -1,5 +1,4 @@
 import { ArrowUpRight } from '@phosphor-icons/react'
-
 interface BlogPost {
   title: string
   date: string
@@ -7,14 +6,19 @@ interface BlogPost {
   href: string
   featured?: boolean
 }
-
 const POSTS: BlogPost[] = [
+  {
+    title: 'What if learning felt like Duolingo, but for anything?',
+    date: 'Jun 01, 2026',
+    preview: "I built Beacon — an AI-powered learning app that generates a personalized curriculum for any skill you want to learn.",
+    href: 'https://medium.com/@diertapasific/what-if-duolingo-could-teach-you-anything-9409db920cac',
+    featured: true,
+  },
   {
     title: 'SumTube: YouTube Videos into Instant Summaries',
     date: 'Sep 09, 2025',
     preview: "YouTube has become the largest library of knowledge on the internet. From hour-long podcasts to educational lectures — here's how I built a tool to summarize it all instantly.",
     href: 'https://medium.com/@diertapasific/sumtube-turning-youtube-videos-into-instant-summaries-61b5e675595d',
-    featured: true,
   },
   {
     title: 'Cardify: LLM-Powered Flashcard Generator',
@@ -41,10 +45,8 @@ const POSTS: BlogPost[] = [
     href: 'https://medium.com/@diertapasific/introduction-to-mobile-app-development-48098b2048c4',
   },
 ]
-
 export default function Blog() {
   const [featured, ...rest] = POSTS
-
   return (
     <div className="px-6 md:px-10 lg:px-14 max-w-4xl mx-auto pb-20">
       <p className="text-[11px] font-semibold text-blue-500 uppercase tracking-[0.18em] mb-5 animate-fade-in">
@@ -56,7 +58,6 @@ export default function Blog() {
       <p className="text-zinc-500 dark:text-zinc-500 text-sm mt-3 animate-fade-in" style={{ animationDelay: '0.08s' }}>
         Thoughts on AI, software, and building things.
       </p>
-
       {/* Featured post */}
       <a
         href={featured.href}
@@ -83,7 +84,6 @@ export default function Blog() {
         </p>
         <p className="text-xs text-zinc-400 dark:text-zinc-600 mt-4 font-mono">{featured.date}</p>
       </a>
-
       {/* Rest */}
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
         {rest.map((post, i) => (
