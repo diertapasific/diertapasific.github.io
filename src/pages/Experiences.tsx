@@ -15,7 +15,7 @@ const SECTIONS: Section[] = [
     label: 'Working',
     items: [
       {
-        title: 'Jr AI Engineer',
+        title: 'Jr Forward Deployed Engineer',
         org: 'Staffinc Group',
         period: 'Feb 2026 – Present',
         bullets: [
